@@ -12,7 +12,14 @@
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    return @"";
+    NSString *counter = @"";
+    NSInteger lowNumber = (number < otherNumber) ? number : otherNumber;
+    NSInteger highNumber = (number > otherNumber) ? number : otherNumber;
+    while (lowNumber <= highNumber) {
+        counter = [counter stringByAppendingString:[NSString stringWithFormat:@"%ld", lowNumber]];
+        lowNumber++;
+    }
+    return counter;
 }
 
 @end
