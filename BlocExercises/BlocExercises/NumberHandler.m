@@ -13,7 +13,7 @@
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
     /* gettin a flag here about loss of integer precision... */
     NSInteger doubledNumber = [number intValue] * 2;
-    return [NSNumber numberWithInt:doubledNumber];
+    return [NSNumber numberWithInteger:doubledNumber];
 }
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
@@ -21,7 +21,7 @@
     NSInteger highNumber = (number <= otherNumber) ? otherNumber : number;
     NSMutableArray *orderedArray= [[NSMutableArray alloc] init];
     while (lowNumber <= highNumber) {
-        [orderedArray addObject:[NSNumber numberWithInt:lowNumber]];
+        [orderedArray addObject:[NSNumber numberWithInteger:lowNumber]];
         lowNumber++;
     }
 
